@@ -13,11 +13,11 @@ const validarGoogleIdToken = async( token ) => {
                 CLIENT_ID,
                 '906413982880-uljf5dbv821125j3vpjib2q7b07f1bso.apps.googleusercontent.com'
             ],  
-            // Specify the CLIENT_ID of the app that accesses the backend
-            // Or, if multiple clients access the backend:
-            //[CLIENT_ID_1, CLIENT_ID_2, CLIENT_ID_3]
         });
         const payload = ticket.getPayload();
+        
+        console.log('==================== PAYLOAD ========================');
+        console.log(payload);
         
         return {
             name: payload['name'],
